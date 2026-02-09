@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>User Management</h1>
+        <p>Simple CRUD demo with Express and MySQL.</p>
+      </header>
+
+      <section class="card">
+        <h2 id="form-title">Create User</h2>
+        <form id="user-form">
+          <label>
+            Name
+            <input type="text" id="name" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" name="email" required />
+          </label>
+          <div class="actions">
+            <button type="submit" id="submit-btn">Create</button>
+            <button type="button" id="cancel-btn" class="secondary" disabled>
+              Cancel
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="table-header">
+          <h2>Users</h2>
+          <button type="button" id="refresh-btn" class="secondary">Refresh</button>
+        </div>
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Created</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="empty-state" class="muted">No users yet.</p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
